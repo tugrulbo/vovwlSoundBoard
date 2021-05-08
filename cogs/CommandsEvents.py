@@ -106,7 +106,7 @@ class CommandsEvents(commands.Cog):
          if ctx.message.content.startswith('.deleteSound'):
           sound_name = ctx.message.content
           author_id = ctx.message.author.id
-         if(author_id == admin_id[0] or author_id == admin_id[1]):
+          if(author_id == admin_id[0] or author_id == admin_id[1]):
             sound_name = sound_name.replace(".deleteSound","")
             sound_name = sound_name.strip()
             if os.path.isfile("sounds/{}.webm".format(sound_name)):
