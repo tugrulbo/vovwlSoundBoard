@@ -19,7 +19,7 @@ import time
 
 
 url =""
-admin_id = 321776153234898965
+admin_id = [321776153234898965,328935937604059140]
 
 ytdl_format_options = {
         'format': 'bestaudio[ext=webm]',
@@ -72,7 +72,7 @@ class CommandsEvents(commands.Cog):
       if ctx.message.content.startswith('.play'):
           channel = ctx.message.author.voice.channel
           author_id = ctx.message.author.id
-          if(author_id == admin_id):
+          if(author_id == admin_id[0] or author_id == admin_id[1]):
             voice = get(self.bot.voice_clients, guild=ctx.guild)
             sound_name = ctx.message.content
             sound_name = sound_name.replace(".play","")
@@ -106,7 +106,7 @@ class CommandsEvents(commands.Cog):
          if ctx.message.content.startswith('.deleteSound'):
           sound_name = ctx.message.content
           author_id = ctx.message.author.id
-          if(author_id == admin_id):
+         if(author_id == admin_id[0] or author_id == admin_id[1]):
             sound_name = sound_name.replace(".deleteSound","")
             sound_name = sound_name.strip()
             if os.path.isfile("sounds/{}.webm".format(sound_name)):
@@ -124,7 +124,7 @@ class CommandsEvents(commands.Cog):
         if ctx.message.content.startswith('.trimVideo'):
             message = ctx.message.content
             author_id = ctx.message.author.id
-            if(author_id == admin_id):
+            if(author_id == admin_id[0] or author_id == admin_id[1]):
                 replace_prefix = message.replace('.trimVideo',"")
                 split_content = replace_prefix.split('|')
                 print(split_content)
@@ -153,7 +153,7 @@ class CommandsEvents(commands.Cog):
         if ctx.message.content.startswith('.add'):
             message = ctx.message.content
             author_id = ctx.message.author.id
-            if(author_id == admin_id):
+           if(author_id == admin_id[0] or author_id == admin_id[1]):
                 replace_prefix = message.replace('.add',"")
                 split_content = replace_prefix.split('|')
                 print(split_content)
