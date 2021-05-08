@@ -11,7 +11,6 @@ import discord
 from discord.ext import commands
 import youtube_dl as yt
 import youtube_dl
-from youtube_search import YoutubeSearch
 import asyncio
 from moviepy.editor import VideoFileClip, concatenate_videoclips, CompositeVideoClip
 from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
