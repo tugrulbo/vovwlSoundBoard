@@ -153,7 +153,7 @@ class CommandsEvents(commands.Cog):
         if ctx.message.content.startswith('.add'):
             message = ctx.message.content
             author_id = ctx.message.author.id
-           if(author_id == admin_id[0] or author_id == admin_id[1]):
+            if(author_id == admin_id[0] or author_id == admin_id[1]):
                 replace_prefix = message.replace('.add',"")
                 split_content = replace_prefix.split('|')
                 print(split_content)
@@ -165,7 +165,7 @@ class CommandsEvents(commands.Cog):
                     await YTDLSource.from_url(url, stream=False)
                     
                 os.rename("video1.webm","sounds/{}.webm".format(video_name))
-           else:
+            else:
                  await ctx.send("Sadece yetkili ses ekleyebilir.")
         else:
             await ctx.send("Böyle bir komut yok.( Tanımlama şekli: .add url | ses_ismi )")
