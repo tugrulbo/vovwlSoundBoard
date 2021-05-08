@@ -138,6 +138,10 @@ class CommandsEvents(commands.Cog):
                 video_name = video_name.strip()
                 async with ctx.typing():
                     await YTDLSource.from_url(url, stream=False)
+            
+                ffmpeg_extract_subclip("video1.webm", int(start_time), int(end_time), targetname="sounds/{}.webm".format(video_name))
+                os.remove("video1.webm")
+
             else:
                 await ctx.send("Sadece yetkili ses kesebilir.")
         else:
