@@ -165,7 +165,7 @@ class CommandsEvents(commands.Cog):
                     await YTDLSource.from_url(url, stream=False)
                     
                 os.rename("video1.webm","sounds/{}.webm".format(video_name))
-            else:
+           else:
                  await ctx.send("Sadece yetkili ses ekleyebilir.")
         else:
             await ctx.send("Böyle bir komut yok.( Tanımlama şekli: .add url | ses_ismi )")
