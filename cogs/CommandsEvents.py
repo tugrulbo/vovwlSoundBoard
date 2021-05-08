@@ -90,7 +90,7 @@ class CommandsEvents(commands.Cog):
               async with ctx.typing():
                   #player = await YTDLSource.from_url("sounds/{}.webm".format(sound_name), loop=self.bot.loop, stream=True)
                   #ctx.voice_client.play(player, after=lambda e: print('Oynatıcı Hatası: %s' % e) if e else None)
-                  ctx.voice_client.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="sounds/{}.webm".format(sound_name)))
+                  ctx.voice_client.play(discord.FFmpegPCMAudio(executable="/app/vendor/ffmpeg/ffmpeg", source="sounds/{}.webm".format(sound_name)))
               await ctx.send('Şuan oynatılıyor: {}'.format(sound_name))
 
             else:
