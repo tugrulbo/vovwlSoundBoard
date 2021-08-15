@@ -19,7 +19,7 @@ import time
 
 
 url =""
-admin_id = [321776153234898965,328935937604059140]
+admin_id = ["add user"]
 
 ytdl_format_options = {
         'format': 'bestaudio[ext=webm]',
